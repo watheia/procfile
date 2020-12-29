@@ -15,10 +15,10 @@
 api = "0.4"
 
 [buildpack]
-id       = "paketo-buildpacks/procfile"
-name     = "Paketo Procfile Buildpack"
-version  = "{{.version}}"
-homepage = "https://github.com/paketo-buildpacks/procfile"
+id       = "dapper-devops/procfile"
+name     = "Procfile Buildpack"
+version  = "2020.12.0"
+homepage = "https://gitlab.com/watheia/dapper-devops/buildpacks/bash"
 
 [[stacks]]
 id = "io.buildpacks.stacks.bionic"
@@ -28,6 +28,12 @@ id = "io.paketo.stacks.tiny"
 
 [[stacks]]
 id = "org.cloudfoundry.stacks.cflinuxfs3"
+
+[[stacks]]
+id = "dev.watheia.stacks.slim"
+
+[[stacks]]
+id = "dev.watheia.stacks.dendrite"
 
 [metadata]
 pre-package   = "scripts/build.sh"
